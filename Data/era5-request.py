@@ -43,7 +43,7 @@ request = {
         "potential_evaporation"
     ],
     "year": ["2024"],
-    "month": ["12"],
+    "month": ["10"],
     "day": [
         "01", "02", "03",
         "04", "05", "06",
@@ -68,7 +68,7 @@ request = {
         "21:00", "22:00", "23:00"
     ],
     "data_format": "grib",
-    "download_format": "zip",
+    "download_format": "unarchived",
     "area": [75, -40, 10, 60]
 }
 

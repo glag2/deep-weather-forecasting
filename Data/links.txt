@@ -1,6 +1,9 @@
+- https://cds.climate.copernicus.eu/datasets (EU datasets, some of them are updated hourly)
+- https://codes.ecmwf.int/grib/param-db/ (list of all the columns of the EU datasets)
+- https://data.ecmwf.int/ (realtime data (updated hourly))
+
 - https://www.ncdc.noaa.gov/access (An official website of the United States government)ù
 - https://meteohub.mistralportal.it/app/datasets
-- https://cds.climate.copernicus.eu/datasets (EU datasets, some of them are updated hourly)
 - https://www.drops.live/it-it/continent/eu (beautiful soup ?)
 - https://open-meteo.com/
 - https://open-meteo.com/en/docs/historical-weather-api

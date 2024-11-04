@@ -2,6 +2,7 @@
 *.grib
 *.zip
 *.7z
+*.idx
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

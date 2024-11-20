@@ -1,6 +1,8 @@
 import cdsapi
 
 dataset = "reanalysis-era5-single-levels"
+
+#Reanalysis combines model data with observations from across the world into a globally complete and consistent dataset using the laws of physics.
 request = {
     "product_type": ["reanalysis"],
     "variable": [
@@ -46,8 +48,7 @@ request = {
     ],
     "year": ["2024"],
     "month": [
-        "01", "02", "03",
-        "04"
+        "01", "02"
     ],
     "day": [
         "01", "02", "03",
@@ -76,4 +77,4 @@ request = {
     "download_format": "unarchived"
 }
 client = cdsapi.Client()
-client.retrieve(dataset, request, target="January_February_March_April_2024.grib").download()
+client.retrieve(dataset, request, target="January_February_2024.grib").download()

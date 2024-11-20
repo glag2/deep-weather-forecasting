@@ -2,12 +2,7 @@ import cdsapi
 
 dataset = "reanalysis-era5-single-levels"
 request = {
-    "product_type": [
-        "reanalysis",
-        "ensemble_members",
-        "ensemble_mean",
-        "ensemble_spread"
-    ],
+    "product_type": ["reanalysis"],
     "variable": [
         "10m_u_component_of_wind",
         "10m_v_component_of_wind",
@@ -17,33 +12,43 @@ request = {
         "skin_temperature",
         "100m_u_component_of_wind",
         "100m_v_component_of_wind",
+        "mean_convective_precipitation_rate",
+        "mean_evaporation_rate",
+        "mean_potential_evaporation_rate",
+        "mean_snowfall_rate",
+        "mean_surface_runoff_rate",
+        "mean_total_precipitation_rate",
         "clear_sky_direct_solar_radiation_at_surface",
-        "surface_net_solar_radiation",
-        "surface_net_thermal_radiation",
+        "surface_latent_heat_flux",
+        "top_net_solar_radiation",
+        "top_net_thermal_radiation",
+        "cloud_base_height",
         "high_cloud_cover",
         "low_cloud_cover",
         "medium_cloud_cover",
         "total_cloud_cover",
         "total_column_cloud_ice_water",
         "total_column_cloud_liquid_water",
-        "convective_precipitation",
-        "convective_rain_rate",
-        "precipitation_type",
-        "snow_density",
-        "snowfall",
-        "temperature_of_snow_layer",
-        "soil_temperature_level_4",
-        "soil_type",
-        "vertical_integral_of_kinetic_energy",
-        "vertical_integral_of_potential_internal_and_latent_energy",
-        "convective_available_potential_energy",
-        "friction_velocity",
-        "zero_degree_level",
         "evaporation",
-        "potential_evaporation"
+        "runoff",
+        "convective_precipitation",
+        "precipitation_type",
+        "total_column_rain_water",
+        "convective_snowfall",
+        "snow_density",
+        "snow_depth",
+        "snow_evaporation",
+        "snowfall",
+        "soil_temperature_level_1",
+        "soil_type",
+        "air_density_over_the_oceans",
+        "zero_degree_level"
     ],
     "year": ["2024"],
-    "month": ["10"],
+    "month": [
+        "01", "02", "03",
+        "04"
+    ],
     "day": [
         "01", "02", "03",
         "04", "05", "06",
@@ -68,9 +73,7 @@ request = {
         "21:00", "22:00", "23:00"
     ],
     "data_format": "grib",
-    "download_format": "unarchived",
-    "area": [75, -40, 10, 60]
+    "download_format": "unarchived"
 }
-
 client = cdsapi.Client()
-client.retrieve(dataset, request).download()
+client.retrieve(dataset, request, target="January_February_March_April_2024.grib").download()

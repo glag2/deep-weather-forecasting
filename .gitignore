@@ -3,6 +3,7 @@
 *.zip
 *.7z
 *.idx
+*.crdownload
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
